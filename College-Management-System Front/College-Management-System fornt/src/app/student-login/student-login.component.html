@@ -1,0 +1,65 @@
+
+<body>
+    <div class="container">
+<form (ngSubmit)="Studentlogin()">
+            <div>
+                 <table class="container">
+                <tr>
+                    <td>
+                            <img src="../../assets/img/studentloginimg1.jpg">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="un">UserEmail : </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="email" id="un" name="un" placeholder="UserName" required
+                                [(ngModel)]="email" /><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pw">PassWord : </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                    <input [type]="changetype?'password':'text'"  id="pw" name="pw" placeholder="PassWord" required [(ngModel)]="password" />
+                    <span class="eyeicon" (click)="viewpassword()"><mat-icon>visibility</mat-icon></span>
+        <br>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td>
+                                <small><a routerLink="/student-forgot-password">Forget Password</a></small>
+                                
+                            </td>
+                       
+                    </tr>
+                    <tr>
+                        <td>
+                            <button type="submit" class="btn btn-primary" value="Login" >Login</button>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            If You Are New Student  Register Here....!
+                        </td>
+                    </tr>
+                    <br>
+                    <tr>
+                        <td>
+                            <button routerLink="/studentregister" routerLinkActive="active">Register</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+</body>
+<footer>
+    <p><small>copyright&#64;2023</small> OurCollege. All rights reserved.</p>
+  </footer>
